@@ -1,5 +1,6 @@
 {{- $root := . }}
 {{- range .Values.namespaces }}
+---
 kind: Namespace
 apiVersion: v1
 metadata:
