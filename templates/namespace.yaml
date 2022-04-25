@@ -1,0 +1,9 @@
+{{- $root := . }}
+{{- range .Values.namespaces }}
+---
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: {{ . }}
+  labels: {{- include "labels" $root | nindent 4 }}
+{{- end }}

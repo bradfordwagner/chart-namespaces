@@ -1,5 +1,4 @@
 apiVersion: v2
-name: helloworld
-description: A Helm chart for Kubernetes
+name: namespaces
 type: application
 version: 1.0.0
