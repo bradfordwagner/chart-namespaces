@@ -1,0 +1,8 @@
+{{- $root := . }}
+{{- range .Values.namespaces }}
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: {{ $root.Release.Namespace }}
+  labels: {{- template "labels" $root | nindent 4 }}
+{{- end }}
