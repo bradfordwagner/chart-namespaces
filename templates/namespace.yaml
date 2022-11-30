@@ -1,5 +1,5 @@
 {{- $root := . }}
-{{- range .Values.namespaces }}
+{{- range compact .Values.namespaces }}
 ---
 kind: Namespace
 apiVersion: v1
