@@ -33,7 +33,6 @@ spec:
             value: quay.io/bradfordwagner/helm:1.0.0-debian_bullseye
           - name: csi_class
             value: acr-prod
-            # value: acr-sandbox
         templateRef:
           name: flavor-helm-template
           template: main
