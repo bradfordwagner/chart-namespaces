@@ -1,5 +1,6 @@
 {{- $root := . }}
-{{- range compact .Values.namespaces }}
+{{- $ns := splitList "|" .Values.namespaces }}
+{{- range compact $ns }}
 ---
 kind: Namespace
 apiVersion: v1
