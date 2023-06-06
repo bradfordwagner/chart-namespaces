@@ -37,4 +37,3 @@ spec:
         templateRef:
           name: flavor-helm-template
           template: main
-
