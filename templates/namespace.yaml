@@ -7,4 +7,7 @@ apiVersion: v1
 metadata:
   name: {{ . }}
   labels: {{- include "labels" $root | nindent 4 }}
+  annotations:
+    # do not delete  namespace when  deleting argocd application
+    argocd.argoproj.io/sync-options: Delete=false
 {{- end }}
