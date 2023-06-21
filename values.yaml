@@ -1,3 +1,6 @@
 ---
-namespaces: "" # string of '|' separated namespaces to create ex: ns1,ns2
+separator: ' '
+namespaces: >
+  ns1
+  ns2
 

@@ -1,11 +1,11 @@
 {{- $root := . }}
-{{- $ns := splitList "|" .Values.namespaces }}
+{{- $ns := splitList .Values.separator .Values.namespaces }}
 {{- range compact $ns }}
 ---
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: {{ . }}
+  name: {{ trim . }}
   labels: {{- include "labels" $root | nindent 4 }}
   annotations:
     # do not delete  namespace when  deleting argocd application
