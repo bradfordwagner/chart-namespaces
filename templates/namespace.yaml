@@ -6,7 +6,7 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: {{ trim . }}
-  labels: {{- include "labels" $root | nindent 4 }}
+  labels: {{ $root.Values.labels | toYaml | nindent 4 }}
   annotations:
     # do not delete  namespace when  deleting argocd application
     argocd.argoproj.io/sync-options: Delete=false
