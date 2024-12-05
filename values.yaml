@@ -3,5 +3,4 @@ separator: ' '
 namespaces: >
   ns1
   ns2
-labels:
-  my_label: my_value
+labels: {}
